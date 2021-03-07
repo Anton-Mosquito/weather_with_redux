@@ -1,7 +1,7 @@
 import { ICoords } from "../models/coords.model";
 
 const API_key: string = '44b788430b6eae4f49d10064566fc911';
-const URL: string =  'http://api.openweathermap.org/data/2.5/find?';
+const URL: string =  'https://api.openweathermap.org/data/2.5/find?';
 
 const delay = (ms: number) => {
   return new Promise((resolve: any) => setTimeout(() => resolve(), ms));
