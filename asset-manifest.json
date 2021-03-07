@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/Anton-Mosquito/weather_with_redux.git/static/js/main.29c3e244.chunk.js",
-    "main.js.map": "/Anton-Mosquito/weather_with_redux.git/static/js/main.29c3e244.chunk.js.map",
-    "runtime-main.js": "/Anton-Mosquito/weather_with_redux.git/static/js/runtime-main.d7bf0322.js",
-    "runtime-main.js.map": "/Anton-Mosquito/weather_with_redux.git/static/js/runtime-main.d7bf0322.js.map",
-    "static/js/2.8bdcf897.chunk.js": "/Anton-Mosquito/weather_with_redux.git/static/js/2.8bdcf897.chunk.js",
-    "static/js/2.8bdcf897.chunk.js.map": "/Anton-Mosquito/weather_with_redux.git/static/js/2.8bdcf897.chunk.js.map",
-    "static/js/3.ed0cc51d.chunk.js": "/Anton-Mosquito/weather_with_redux.git/static/js/3.ed0cc51d.chunk.js",
-    "static/js/3.ed0cc51d.chunk.js.map": "/Anton-Mosquito/weather_with_redux.git/static/js/3.ed0cc51d.chunk.js.map",
-    "index.html": "/Anton-Mosquito/weather_with_redux.git/index.html",
-    "static/js/2.8bdcf897.chunk.js.LICENSE.txt": "/Anton-Mosquito/weather_with_redux.git/static/js/2.8bdcf897.chunk.js.LICENSE.txt",
-    "static/media/sprite.bffd5d7d.svg": "/Anton-Mosquito/weather_with_redux.git/static/media/sprite.bffd5d7d.svg"
+    "main.js": "/weather_with_redux/static/js/main.29c3e244.chunk.js",
+    "main.js.map": "/weather_with_redux/static/js/main.29c3e244.chunk.js.map",
+    "runtime-main.js": "/weather_with_redux/static/js/runtime-main.08b1f45a.js",
+    "runtime-main.js.map": "/weather_with_redux/static/js/runtime-main.08b1f45a.js.map",
+    "static/js/2.43a91d6b.chunk.js": "/weather_with_redux/static/js/2.43a91d6b.chunk.js",
+    "static/js/2.43a91d6b.chunk.js.map": "/weather_with_redux/static/js/2.43a91d6b.chunk.js.map",
+    "static/js/3.ed0cc51d.chunk.js": "/weather_with_redux/static/js/3.ed0cc51d.chunk.js",
+    "static/js/3.ed0cc51d.chunk.js.map": "/weather_with_redux/static/js/3.ed0cc51d.chunk.js.map",
+    "index.html": "/weather_with_redux/index.html",
+    "static/js/2.43a91d6b.chunk.js.LICENSE.txt": "/weather_with_redux/static/js/2.43a91d6b.chunk.js.LICENSE.txt",
+    "static/media/sprite.bffd5d7d.svg": "/weather_with_redux/static/media/sprite.bffd5d7d.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d7bf0322.js",
-    "static/js/2.8bdcf897.chunk.js",
+    "static/js/runtime-main.08b1f45a.js",
+    "static/js/2.43a91d6b.chunk.js",
     "static/js/main.29c3e244.chunk.js"
   ]
 }
