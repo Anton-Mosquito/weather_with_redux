@@ -36,9 +36,9 @@ justify-items: center;
 padding-bottom: 10px;
 position: relative;
 
-@media screen and(max-width: 440px) {
-        grid-template-columns: 200px;
-        grid-template-rows: repeat(5, 190px);
+@media screen and (max-width: 440px) {
+    grid-template-columns: 200px;
+    grid-template-rows: repeat(5, 190px);
 }
 
 @media screen and (min-width: 440px) and (max-width: 650px) {
