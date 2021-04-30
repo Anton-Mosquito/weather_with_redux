@@ -1,5 +1,5 @@
 import React from 'react';
-import { DataListFieldItem } from './dataListFieldItem/dataListFieldItem';
+import { DataListFieldItem } from './dataListFieldItem';
 import styled from 'styled-components';
 
 type DataProps = {
@@ -8,14 +8,14 @@ type DataProps = {
 
 type ArrayKey = [string, number]
 
-export const DataListField: React.FC<DataProps> = ({data}) => {
+export const DataListField: React.FC<DataProps> = ({data}: DataProps) => {
     let innerHeaderField: string;
     let innerItemFieldArray: Array<ArrayKey> = [];
 
     switch (data[0]) {
         case 'main':
             innerHeaderField = 'Temperature';
-            innerItemFieldArray = Object.entries(data[1]).filter((item) => item[0] === 'temp' || item[0] === 'feels_like');
+            innerItemFieldArray = Object.entries(data[1]).filter((item: ArrayKey) => item[0] === 'temp' || item[0] === 'feels_like');
         break;
         case 'wind':
             innerHeaderField = 'Wind';

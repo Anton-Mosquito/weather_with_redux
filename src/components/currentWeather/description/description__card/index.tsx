@@ -1,6 +1,7 @@
-import { DescriptionList } from './descriptionList/descriptionList';
-import { ImageField } from './ImageField/ImageField';
-import { TemperatuteField } from './TemperatuteField/temperatuteField';
+import React from 'react';
+import { DescriptionList } from './descriptionList';
+import { ImageField } from './ImageField';
+import { TemperatuteField } from './TemperatuteField';
 import styled from 'styled-components'
 
 export const DescriptionCard: React.FC = () => {

@@ -1,15 +1,16 @@
 import React, { memo } from 'react';
-import { Description } from './description/description';
-import { Header } from './header/header';
-import { SearchForm } from './search/search';
-import { Spinner } from '../spinner/spinner';
+import { Description } from './description';
+import { Header } from './header';
+import { SearchForm } from './search';
+import { Spinner } from '../spinner';
 
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+import { RootState } from '../../store/rootReducer';
 
 export const CurrentWeather = memo(() => {
-    const loadingMain = useSelector((state: any) => state.weather.loadingForm );
-    const trueInfo = useSelector((state: any) => state.weather.trueInfo);
+    const loadingMain = useSelector((state: RootState) => state.weather.loadingForm );
+    const trueInfo = useSelector((state: RootState) => state.weather.trueInfo);
     
     return (
         <Content>
@@ -32,4 +33,8 @@ backdrop-filter: blur(10px);
 display: grid;
 grid-template-columns: 100%;
 grid-gap: 15px;
+
+@media screen and(max-width: 440px) {
+        padding: 3px;
+}
 `;

@@ -1,12 +1,11 @@
 import React from "react";
-import { CityField } from "./cityField/cityField";
-import { ImageField } from "./imageField/ImageField";
-import { DateField } from "./dateField/dateField";
-import { DataListField } from "./dataListField/dataListField";
+import { CityField } from "./cityField";
+import { ImageField } from "./imageField";
+import { DateField } from "./dateField";
+import { DataListField } from "./dataListField";
 import { IMainInfo, IWeather } from "../../../../models/dataCity.model";
 
 import styled from 'styled-components';
-
 
 type CityProps = {
     data : IMainInfo;
@@ -14,7 +13,7 @@ type CityProps = {
 
 type ArrayKey = [string, number];
 
-export const ForecastListItem: React.FC<CityProps>= ({data}) => {
+export const ForecastListItem: React.FC<CityProps>= ({data}: CityProps) => {
     let cityData: Array<ArrayKey> = [];
     let dateData: Array<ArrayKey> = [];
     let imageData: Array<IWeather> = [];
@@ -22,11 +21,11 @@ export const ForecastListItem: React.FC<CityProps>= ({data}) => {
     let windArray: Array<ArrayKey> = [];
 
     if (data) {
-        cityData = Object.entries(data).filter((item: any) => item[0] === 'name');
-        dateData = Object.entries(data).filter((item: any) => item[0] === 'dt');
+        cityData = Object.entries(data).filter((item: ArrayKey) => item[0] === 'name');
+        dateData = Object.entries(data).filter((item: ArrayKey) => item[0] === 'dt');
         imageData =  Object.values(data.weather)
-        temperatureArray = Object.entries(data).filter((item: any) => item[0] === 'main');
-        windArray = Object.entries(data).filter((item: any) => item[0] === 'wind');
+        temperatureArray = Object.entries(data).filter((item: ArrayKey) => item[0] === 'main');
+        windArray = Object.entries(data).filter((item: ArrayKey) => item[0] === 'wind');
     }
 
     return (
@@ -38,8 +37,6 @@ export const ForecastListItem: React.FC<CityProps>= ({data}) => {
         </Cards>
     )
 }
-
-
 
 const Cards = styled.div`
 width: 100%;

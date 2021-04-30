@@ -1,9 +1,11 @@
+import React from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components'
+import { RootState } from '../../../../../store/rootReducer';
 
 
 export const TemperatuteField: React.FC = () => {
-    const dataPosition = useSelector((state: any) => state.weather.dataPosition);
+    const dataPosition = useSelector((state: RootState) => state.weather.dataPosition);
     const temp: number | undefined = dataPosition?.main.temp;
     
     return (

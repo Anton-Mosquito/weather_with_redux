@@ -17,28 +17,28 @@ import {
 } from "./types";
 
 export interface IinitialState {
-    dataPosition: IDataPosition | {};
-    dataCity: IDataCity | {};
+    dataPosition: IDataPosition | null;
+    dataCity: IDataCity | null;
     lastCity: string;
     loadingCards: boolean;
     loadingForm: boolean;
-    lastCoords: ICoords | {};
+    lastCoords: ICoords | null;
     typeRequset: string;
     trueInfo: boolean;
 }
 
 const initialState: IinitialState = {
-    dataPosition: {},
-    dataCity: {},
+    dataPosition: null,
+    dataCity: null,
     lastCity: '',
     loadingCards: true,
     loadingForm: true,
-    lastCoords: {},
+    lastCoords: null,
     typeRequset: 'Hourly',
     trueInfo: true,
 };
 
-export const weatherReducer = (state = initialState, action: WeatherActionTypes) => {
+export const weatherReducer = (state = initialState, action: WeatherActionTypes): IinitialState => {
     switch (action.type) {
         case RECORD_POSITION:
             return {

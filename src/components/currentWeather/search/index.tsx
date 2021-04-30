@@ -1,14 +1,15 @@
 import React, { FormEvent,FormEventHandler, memo, useCallback, useState} from 'react';
-import { SearchBox } from './searchBox/searchBox';
-import { RadioBox } from './radioBox/radioBox';
+import { SearchBox } from './searchBox';
+import { RadioBox } from './radioBox';
 
 import styled from "styled-components";
 import { useDispatch, useSelector } from 'react-redux';
 import { updateData, updatedWeatherCityCards, updatedWeatherNearbyCards } from '../../../store/actions';
+import { RootState } from '../../../store/rootReducer';
 
 
-export const SearchForm: React.FC = memo(() => {
-    const {typeRequset, lastCoords, lastCity} = useSelector((state: any) => state.weather);
+export const SearchForm: React.FC = memo((): JSX.Element => {
+    const {typeRequset, lastCoords, lastCity} = useSelector((state: RootState) => state.weather);
     const dispatch = useDispatch();
     const [value, setValue] = useState<string>("");
 
@@ -24,7 +25,7 @@ export const SearchForm: React.FC = memo(() => {
       break;
       case 'Nearby':
         dispatch(updateData(city));
-        dispatch(updatedWeatherNearbyCards(lastCoords));
+        if(lastCoords) dispatch(updatedWeatherNearbyCards(lastCoords));
     }
   }, [dispatch, lastCoords, typeRequset]);
 
@@ -47,7 +48,7 @@ export const SearchForm: React.FC = memo(() => {
             dispatch(updatedWeatherCityCards(lastCity));
             break;
           case 'Nearby':
-            dispatch(updatedWeatherNearbyCards(lastCoords));
+            if(lastCoords) dispatch(updatedWeatherNearbyCards(lastCoords));
             break;
           default:
             break;

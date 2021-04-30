@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import sprite from "../../../../../../assets/sprite.svg";
 
@@ -5,7 +6,7 @@ type ValueProps = {
     value : [string, number]
 }
 
-export const DescriptionListItem: React.FC<ValueProps> = ({value}) => {
+export const DescriptionListItem: React.FC<ValueProps> = ({value}: ValueProps) => {
     let firstFieldName: string;
     let secondFieldName! : string;
     let rotate!: string;

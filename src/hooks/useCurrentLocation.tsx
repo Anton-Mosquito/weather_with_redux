@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ICoords } from "../models/coords.model";
 import { IOptions } from "../models/options.model";
 
-const useCurrentLocation = (options: IOptions) => {
+const useCurrentLocation = (options: IOptions): { location: ICoords | undefined, error: string | undefined } => {
 
   const [location, setLocation] = useState<ICoords>();
   const [error, setError] = useState<string>();

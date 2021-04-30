@@ -1,4 +1,4 @@
-import { takeEvery, put, call } from 'redux-saga/effects'
+import { takeEvery, put, call, ForkEffect } from 'redux-saga/effects'
 import { IDataCity } from '../../models/dataCity.model';
 import IDataPosition from '../../models/dataPosition.model';
 import getWeather from '../../services/requestCurrentWeather';
@@ -13,7 +13,7 @@ import {
 } from '../actions';
 import { REQUEST_WEATHER } from '../types';
 
-export function* sagaWatcher() {
+export function* sagaWatcher(): Generator<ForkEffect<never>, void, unknown> {
     yield takeEvery(REQUEST_WEATHER, sagaWorker);
 }
 

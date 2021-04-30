@@ -1,4 +1,4 @@
-import { takeEvery, put, call } from 'redux-saga/effects'
+import { takeEvery, put, call, ForkEffect } from 'redux-saga/effects'
 import { ICoords } from '../../models/coords.model';
 import { IDataCity } from '../../models/dataCity.model';
 import IDataPosition from '../../models/dataPosition.model';
@@ -18,7 +18,7 @@ import {
 } from '../actions';
 import { UPDATED_DATA } from '../types';
 
-export function* updateDataWatcher() {
+export function* updateDataWatcher(): Generator<ForkEffect<never>, void, unknown> {
     yield takeEvery(UPDATED_DATA, updateWorker);
 }
 

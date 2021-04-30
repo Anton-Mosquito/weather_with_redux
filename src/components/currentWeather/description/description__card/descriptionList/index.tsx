@@ -1,7 +1,8 @@
 import React from 'react';
-import { DescriptionListItem } from './descriptionListItem/descriptionListItem';
+import { DescriptionListItem } from './descriptionListItem';
 import styled from "styled-components";
 import { useSelector } from 'react-redux';
+import { RootState } from '../../../../../store/rootReducer';
 
 type TitleProps = {
     title: string
@@ -9,9 +10,8 @@ type TitleProps = {
 
 type ArrayKey = [string, number]
 
-export const DescriptionList: React.FC<TitleProps> = ({ title }) => {
-    const dataPosition = useSelector((state: any) => state.weather.dataPosition);
-
+export const DescriptionList: React.FC<TitleProps> = ({ title }: TitleProps) => {
+    const dataPosition = useSelector((state: RootState) => state.weather.dataPosition);
 
     let temperatureArray: any = [];
     let sunArray: any = [];

@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { IRadio } from '../../../../models/radio.model';
-import { RadioItem } from './radioItems/radioItems';
+import { RadioItem } from './radioItems';
 import styled from 'styled-components'
 
 type DataProps = {
@@ -8,7 +8,7 @@ type DataProps = {
     change: (id: number, value: string) => void
 }
 
-export const RadioBox = memo(({info, change}: DataProps) => {
+export const RadioBox = memo(({info, change}: DataProps): JSX.Element => {
     return (
         <Line>
             {info.map((item: IRadio) => <RadioItem key={item.id} onChange={change} {...item}/>)}

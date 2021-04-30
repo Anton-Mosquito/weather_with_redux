@@ -1,3 +1,4 @@
+import React from 'react';
 import sprite from "../../../../assets/sprite.svg";
 import { ChangeEvent, memo } from 'react';
 import styled from 'styled-components';
@@ -7,14 +8,14 @@ type DataProps = {
     changeValue: (value: string) => void;
 }
 
-export const SearchBox = memo(({valueOfField, changeValue}: DataProps) => {
+export const SearchBox = memo(({valueOfField, changeValue}: DataProps): JSX.Element => {
     return (
-        <Wrapper>
+    <Wrapper>
         <Input placeholder="Enter the city name..." onChange={(event: ChangeEvent) => changeValue((event.target as HTMLInputElement).value)} value={valueOfField}/>
         <Button type="submit">
-        <Icon>
-            <use href={sprite + "#search"}></use>
-        </Icon>
+            <Icon>
+                <use href={sprite + "#search"}></use>
+                </Icon>
         </Button>
     </Wrapper>
     )

@@ -1,8 +1,10 @@
+import React from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components'
+import { RootState } from '../../../../../store/rootReducer';
 
 export const ImageField: React.FC = () => {
-    const dataPosition = useSelector((state: any) => state.weather.dataPosition);
+    const dataPosition = useSelector((state: RootState) => state.weather.dataPosition);
     const icon: string | undefined = dataPosition?.weather[0].icon;
     const text: string | undefined = dataPosition?.weather[0].main;
     

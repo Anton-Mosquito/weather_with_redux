@@ -1,6 +1,7 @@
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-export const Loader = () => {
+export const Loader = (): JSX.Element => {
     return (
         <Wrapper>
             <Circle></Circle>

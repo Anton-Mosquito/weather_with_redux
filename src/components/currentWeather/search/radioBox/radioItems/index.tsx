@@ -1,5 +1,7 @@
+import React from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
+import { RootState } from '../../../../../store/rootReducer';
 
 type DataProps = {
     forLabel: string,
@@ -10,8 +12,8 @@ type DataProps = {
     onChange: (id: number, value: string) => void,
 }
 
-export const RadioItem = ({forLabel, forId, text, id,check, onChange}: DataProps) => {
-    const {trueInfo} = useSelector((state: any) => state.weather);
+export const RadioItem = ({forLabel, forId, text, id,check, onChange}: DataProps): JSX.Element => {
+    const {trueInfo} = useSelector((state: RootState) => state.weather);
 
     return (
         <Label htmlFor={forLabel} >

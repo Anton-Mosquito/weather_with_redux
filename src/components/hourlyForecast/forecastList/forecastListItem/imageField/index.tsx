@@ -1,3 +1,4 @@
+import React from "react";
 import { IWeather } from '../../../../../models/dataCity.model';
 import styled from 'styled-components';
 
@@ -5,7 +6,7 @@ type DataProps = {
     data: IWeather
 }
 
-export const ImageField: React.FC<DataProps> = ({data}) => {
+export const ImageField: React.FC<DataProps> = ({data}: DataProps) => {
     const icon: string = data.icon;
     
     return (

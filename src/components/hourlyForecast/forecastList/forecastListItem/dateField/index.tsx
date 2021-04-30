@@ -1,10 +1,11 @@
+import React from "react";
 import styled from 'styled-components';
 
 type DateProps = {
     data : [string, number]
 }
 
-export const DateField: React.FC<DateProps>= ({data}) => {
+export const DateField: React.FC<DateProps>= ({data}: DateProps) => {
     const innerData = new Date(data[1] * 1000).toLocaleString();
     
     return (
@@ -13,7 +14,6 @@ export const DateField: React.FC<DateProps>= ({data}) => {
         </Header>
     )
 }
-
 
 const Header = styled.h3`
 display: flex;

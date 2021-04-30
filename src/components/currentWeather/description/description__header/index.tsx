@@ -1,9 +1,11 @@
+import React from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components'
+import { RootState } from '../../../../store/rootReducer';
 
 export const DescriptionHeader: React.FC = () => {
-    const dataPosition = useSelector((state: any) => state.weather.dataPosition);
-    let date : number | undefined = dataPosition?.dt;
+    const dataPosition = useSelector((state: RootState) => state.weather.dataPosition);
+    const date : number | undefined = dataPosition?.dt;
     
     return (
     <Header>

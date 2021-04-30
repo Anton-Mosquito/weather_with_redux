@@ -1,10 +1,11 @@
+import React from "react";
 import styled  from 'styled-components';
 
 type CityProps = {
     data : [string, number]
 }
 
-export const CityField: React.FC<CityProps> = ({data}) => {
+export const CityField: React.FC<CityProps> = ({data}: CityProps) => {
     const innerData = data[1];
     
     return (

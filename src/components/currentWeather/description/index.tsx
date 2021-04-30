@@ -1,5 +1,6 @@
-import { DescriptionCard } from './description__card/description__card';
-import { DescriptionHeader } from './description__header/description__header';
+import React from 'react';
+import { DescriptionCard } from './description__card';
+import { DescriptionHeader } from './description__header';
 import styled from 'styled-components'
 
 export const Description: React.FC = () => {

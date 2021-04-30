@@ -1,11 +1,11 @@
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-export const Spinner = () => {
+export const Spinner = (): JSX.Element => {
     return (
         <SpinnerBlock></SpinnerBlock>
     )
 }
-
 
 const Loader = keyframes`
 0% {

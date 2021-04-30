@@ -1,9 +1,11 @@
+import React from 'react';
 import { useSelector } from "react-redux";
 import sprite from "../../../assets/sprite.svg";
 import styled from 'styled-components'
+import { RootState } from "../../../store/rootReducer";
 
-export const ForecastHeader = () => {
-    const typeRequset = useSelector((state: any) => state.weather.typeRequset);
+export const ForecastHeader: React.FC = () => {
+    const typeRequset = useSelector((state: RootState) => state.weather.typeRequset);
     
     return (
         <Wrapper>
@@ -16,7 +18,6 @@ export const ForecastHeader = () => {
         </Wrapper>
     )
 }
-
 
 const Wrapper = styled.header`
 display: flex;

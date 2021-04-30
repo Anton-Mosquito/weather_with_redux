@@ -24,7 +24,7 @@ interface ICoord {
     lat : number;
 }
 
-interface IMainData {
+export interface IMainData {
     feels_like: number;
     humidity: number;
     pressure: number;

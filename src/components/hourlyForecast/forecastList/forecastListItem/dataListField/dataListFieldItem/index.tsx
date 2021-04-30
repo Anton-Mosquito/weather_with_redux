@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import sprite from "../../../../../../assets/sprite.svg";
 
@@ -5,10 +6,10 @@ type DataProps = {
     data : [string, number];
 }
 
-export const DataListFieldItem: React.FC<DataProps> = ({data}) => {
-    let nameOfFields: string = '';
-    let valueOfField : string = '';
-    let rotate: string = '';
+export const DataListFieldItem: React.FC<DataProps> = ({data}: DataProps) => {
+    let nameOfFields = '';
+    let valueOfField = '';
+    let rotate = '';
 
     switch (data[0]) {
         case 'temp':

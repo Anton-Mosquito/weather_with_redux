@@ -1,11 +1,11 @@
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-export const Dots = () => {
+export const Dots = (): JSX.Element => {
     return (
         <Span></Span>
     )
 }
-
 
 const move = keyframes`
 100% {
